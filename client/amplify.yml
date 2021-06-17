@@ -1,0 +1,21 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - echo "REACT_APP_APPSYNC_API=$APPSYNC_API" >> .env 
+        - echo "REACT_APP_IDENTITY_POOL_ID=$IDENTITY_POOL_ID" >> .env 
+        - echo "REACT_APP_REGION=$REGION" >> .env 
+        - echo "REACT_APP_USER_POOL_CLIENT_ID=$USER_POOL_CLIENT_ID" >> .env
+        - echo "REACT_APP_USER_POOL_ID=$USER_POOL_ID" >> .env 
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
