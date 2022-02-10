@@ -1,2 +1,3 @@
 backend/appsync
 client/src/graphql/
+backend/config.json

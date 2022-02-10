@@ -1,6 +1,7 @@
 {
   "name": "backend",
   "version": "0.1.0",
+  "license": "MIT",
   "bin": {
     "backend": "bin/backend.js"
   },

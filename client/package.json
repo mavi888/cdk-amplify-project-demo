@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.1",

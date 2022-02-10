@@ -1,0 +1,7 @@
+{
+    "amplify-app": {
+        "repository_name": "repo-name",
+        "repository_owner": "repo-owner",
+        "branch": "main"
+    }
+}

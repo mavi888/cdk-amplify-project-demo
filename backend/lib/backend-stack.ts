@@ -2,6 +2,8 @@ import * as cdk from '@aws-cdk/core';
 import * as cognito from "@aws-cdk/aws-cognito";
 import * as amplify from "@aws-cdk/aws-amplify";
 
+import * as config from '../config.json'  
+
 const appsync = require("@aws-cdk/aws-appsync");
 const cdk_appsync_transformer = require("cdk-appsync-transformer");
 
@@ -48,8 +50,8 @@ export class BackendStack extends cdk.Stack {
     // AMPLIFY APPLICATION
     const amplifyApp = new amplify.App(this, "cdk-amplify-appsync", {
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
-        owner: "mavi888",
-        repository: "cdk-amplify-project",
+        owner: config['amplify-app'].repository_owner,
+        repository: config['amplify-app'].repository_name,
         oauthToken: cdk.SecretValue.secretsManager('github-token')
       }),
       environmentVariables: {
@@ -61,7 +63,7 @@ export class BackendStack extends cdk.Stack {
       }
     });
 
-    const masterBranch = amplifyApp.addBranch("main");
+    const masterBranch = amplifyApp.addBranch(config['amplify-app'].branch);
 
   }
 }
