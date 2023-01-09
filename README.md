@@ -18,13 +18,13 @@ In this demo you will see:
 
 This project is part of a video series posted in FooBar Serverless channel. You can check the video series to see the whole demo, the links are in the resource section.
 
-## Application Arquitecture
+## Application Architecture
 
-This application has 2 parts. A client application and a backend application, and both are meant to existis in to different GitHub projects.
+This application has 2 parts. A client application and a backend application, and both are meant to exist in two different GitHub projects.
 
-The client application is a React webapp, that will use Amplify libraries to connect to the backend. And will be hosted using Amplify console.
+The client application is a React webapp, that will use Amplify libraries to connect to the backend, and will be hosted using the Amplify console.
 
-The backend application is a serverless application, consisting in an Amplify app, a cognito user pool and identity pool, an AppSync endpoint with two datasources.
+The backend application is a serverless application, consisting of an Amplify app, a cognito user pool and identity pool, and an AppSync endpoint with two datasources.
 
 The AppSync endpoint is generated using the 3rd party constructor [CDK AppSync Transformer](https://github.com/kcwinner/cdk-appsync-transformer).
 
@@ -60,7 +60,7 @@ When the deployment of the webapp is done, you can get the URL for it and open i
 ### Delete this application
 
 The whole application deletes with this command.
-After you run it, your Amplify application won't exists as well any of the backend resources created.
+After you run it, your Amplify application won't exist, as well any of the backend resources you created.
 
 ```
 $ cdk destroy
@@ -68,7 +68,7 @@ $ cdk destroy
 
 ## Links related to this code
 
-You can find all the steps by step on how to build this demo.
+You can find all the steps on how to build this demo.
 
 - Part 1: Create the AWS Amplify application using CDK: https://www.youtube.com/watch?v=mSKQlV3lRYw
 - Part 2: Add an existing Amazon Cognito user pool and identity pool to an Amplify App using AWS CDK: https://www.youtube.com/watch?v=FydiAbf4iZI
